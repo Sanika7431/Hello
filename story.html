@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dussera Story</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left, #ffecd2, #fcb69f);
+      text-align: center;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #b22222;
+      font-size: 48px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      animation: glow 2s infinite alternate;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 25px auto;
+      width: 65%;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    ul {
+      list-style: "✨ ";
+      text-align: left;
+      font-size: 20px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 35px;
+      font-size: 18px;
+      font-weight: bold;
+      background: linear-gradient(to right, #ff512f, #dd2476);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff9a9e, 0 0 20px #f08080; }
+      to { text-shadow: 0 0 20px #ff6f61, 0 0 30px #ff6347; }
+    }
+  </style>
+</head>
+<body>
+  <h2>✨ Why do we celebrate Dussera? ✨</h2>
+
+  <div class="card">
+    <p>Dussera marks the victory of Lord Rama over Ravana – 
+    the triumph of <b>Good over Evil</b>. It reminds us to remove negativity 
+    and celebrate positivity in life.</p>
+  </div>
+
+  <div class="card">
+    <ul>
+      <li>Victory of Good</li>
+      <li>End of Evil</li>
+      <li>Festival of Joy</li>
+    </ul>
+  </div>
+
+  <a href="greeting.html" class="btn">Celebrate with Us →</a>
+</body>
+</html>
