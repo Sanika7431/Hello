@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dussera Greetings</title>
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left, #fceabb, #ffb347);
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h2{
+      color: maroon;
+      font-size: 50px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      animation: glow 2s infinite alternate;
+      margin-bottom: 30px;
+    }
+
+    .wish{
+      background: #fff8dc;
+      padding: 25px;
+      margin: 20px auto;
+      width: 60%;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-size: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .wish:hover{
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    h3{
+      margin-top: 40px;
+      font-size: 28px;
+      color: #8b0000;
+    }
+
+    input{
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 15px;
+      font-size: 18px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .btn{
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 35px;
+      background: linear-gradient(to left, #56ab2f, #a8e063);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover{
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff6f61; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #ff2e63; }
+    }
+
+    
+    .decor{
+      font-size: 40px;
+      margin: 15px 0;
+      animation: bounce 2s infinite alternate;
+    }
+
+    @keyframes bounce{
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h2>✨ Dussera Greetings ✨</h2>
+
+  <div class="decor">🏹🔥🌸</div>
+
+  <div class="wish">May this Dussera bring <b>happiness & success</b> to your life! 🎉</div>
+  <div class="wish">Let's celebrate the <b>victory of good over evil</b> together! 🏹</div>
+  <div class="wish">Wishing you and your family <b>joy, peace, and prosperity</b> 🌸</div>
+
+  <h3>Send Your Wishes ✨</h3>
+  <input type="text" placeholder="Enter your name">
+  <br>
+  <a href="#" class="btn">Get Wish</a>
+
+  <div class="decor">🎇✨🎆</div>
+</body>
+</html>
