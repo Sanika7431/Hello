@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#6ee7b7; /* mint */
+      --muted:rgba(255,255,255,0.6);
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --max-width:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071022 0%, #0b1220 100%);color:#e6eef8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+    .container{width:100%;max-width:var(--max-width)}
+
+    /* header */
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042027}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:500}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#60a5fa);border:none;color:#042027;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px}
+    .eyebrow{display:inline-block;background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:12px}
+    h1{font-size:34px;margin:0 0 12px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px;align-items:center}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;color:var(--muted);cursor:pointer}
+
+    /* card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .mock{height:260px;border-radius:10px;background:linear-gradient(135deg,#042027 0%, #07394a 100%);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:18px}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .feature{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .feature h4{margin:0 0 8px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:22px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .container{padding:0 12px}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      h1{font-size:24px}
+      .features{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* small interactions */
+    .btn-primary:hover{transform:translateY(-3px)}
+    .secondary:hover{background:rgba(255,255,255,0.02)}
+    .feature{transition:transform .18s ease, box-shadow .18s ease}
+    .feature:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div style="font-weight:700">SimpleSite</div>
+          <div style="font-size:12px;color:var(--muted)">Make something great</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <button class="btn-primary">Get started</button>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <span class="eyebrow">New — 2025 launch</span>
+        <h1>A clean, simple landing page to showcase your product</h1>
+        <p class="lead">Built with minimal HTML & CSS. Fast to load, responsive, and easy to customize. Change colors, text, or images — it's a great starting point.</p>
+        <div class="actions">
+          <button class="btn-primary">Start free trial</button>
+          <button class="secondary">Watch demo</button>
+        </div>
+
+        <div class="features" id="features">
+          <div class="feature card">
+            <h4>Fast setup</h4>
+            <p>Copy this file, edit text and images, and you're ready to go.</p>
+          </div>
+          <div class="feature card">
+            <h4>Responsive</h4>
+            <p>Looks good on phones, tablets and desktops without extra code.</p>
+          </div>
+          <div class="feature card">
+            <h4>Accessible</h4>
+            <p>Semantic HTML and readable contrast make this a friendly baseline.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div style="font-size:13px;color:var(--muted)">Trusted by</div>
+            <div style="font-weight:700">1200+ teams</div>
+          </div>
+          <div style="font-size:12px;color:var(--muted)">Free 14‑day trial</div>
+        </div>
+        <div class="mock">Product preview</div>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px">Replace this preview with an image or an iframe showing your app. You can also remove the aside if you prefer a single-column layout.</p>
+      </aside>
+
+    </main>
+
+    <footer>
+      <div>© SimpleSite — <span id="year"></span></div>
+      <div style="opacity:.9">Made with ♥</div>
+    </footer>
+  </div>
+
+  <script>
+    // small script to set the year
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
