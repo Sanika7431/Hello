@@ -41,16 +41,11 @@
     /* card */
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     .mock{height:260px;border-radius:10px;background:linear-gradient(135deg,#042027 0%, #07394a 100%);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:18px}
-
-    /* features */
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
     .feature{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     .feature h4{margin:0 0 8px;font-size:16px}
     .feature p{margin:0;color:var(--muted);font-size:14px}
-
     footer{margin-top:22px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
-
-    /* responsive */
     @media (max-width:900px){
       .hero{grid-template-columns:1fr;}
       .container{padding:0 12px}
@@ -61,8 +56,6 @@
       .features{grid-template-columns:1fr}
       nav{display:none}
     }
-
-    /* small interactions */
     .btn-primary:hover{transform:translateY(-3px)}
     .secondary:hover{background:rgba(255,255,255,0.02)}
     .feature{transition:transform .18s ease, box-shadow .18s ease}
@@ -86,7 +79,6 @@
         <button class="btn-primary">Get started</button>
       </nav>
     </header>
-
     <main class="hero">
       <section>
         <span class="eyebrow">New — 2025 launch</span>
@@ -96,7 +88,6 @@
           <button class="btn-primary">Start free trial</button>
           <button class="secondary">Watch demo</button>
         </div>
-
         <div class="features" id="features">
           <div class="feature card">
             <h4>Fast setup</h4>
@@ -112,7 +103,6 @@
           </div>
         </div>
       </section>
-
       <aside class="card">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
           <div>
@@ -124,18 +114,15 @@
         <div class="mock">Product preview</div>
         <p style="margin-top:12px;color:var(--muted);font-size:13px">Replace this preview with an image or an iframe showing your app. You can also remove the aside if you prefer a single-column layout.</p>
       </aside>
-
     </main>
-
     <footer>
       <div>© SimpleSite — <span id="year"></span></div>
       <div style="opacity:.9">Made with ♥</div>
     </footer>
   </div>
-
   <script>
-    // small script to set the year
     document.getElementById('year').innerText = new Date().getFullYear();
   </script>
 </body>
+
 </html>
